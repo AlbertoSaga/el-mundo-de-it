@@ -1,0 +1,207 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Marcellus SC', serif;
+
+/* Añado de fondo la imagen elegida que ocupe toda la pantalla */
+
+	height: 100vh;
+	display: flex; /* Conseguimos el centrado absoluto: horizontal/vertical;
+	gracias a 'justify-content + align-items: center;' */
+	justify-content: center;
+	align-items: center;
+	background: url("../fondos/fondo_mapa.png")no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Propiedades para la apariencia del menú */
+
+a img{ /* Posicionamos y redimensionamos la imagen que hará las funciones del botón 'menú' */
+	top: 0; /* Porque toma como reperencia el body */
+	max-height: 100px;
+	right: 25px;
+	position: fixed; /* Dejo el 'menú' fijo para poder acceder a él en cualquier momento, 
+	sin necesidad de volver a la parte superior */
+	z-index: 1; /* La pongo en primer termino para que siempre esté visible al hacer scroll */
+}
+
+nav{ /* De la misma manera añadimos sus propiedades al futuro 'menú desplegado' */
+	position: fixed;
+	top: -100vh; /* Hacemos desaparecer el 'menú desplegado', siempre y cuando no esté activo gracias a 
+	las funciones de 'JS' qué veremos más adelante */
+	right: -38px;
+	padding: 15px 20px 20px 20px;
+	background-color: rgba(50, 50, 50, 0.9);
+	border-radius: 10px;
+	margin: 73px;
+	text-align: end;
+}
+
+/* Información sobre 'DERRY':
+   Le añadimos las propiedades necesarias a nuestro texto para que tenga una apariencia acorde a la web,
+   tanto para su contenedor, como para el 'h2' y los parrafos 'p' */
+
+.texto{
+	background: url("../fondos/fondo_textos.png") center;
+	background-size: cover;
+	margin: 0px 35px 0 0px;
+	padding: 20px 50px 50px 60px;
+	height: 475px;
+	text-align: center;
+	border-radius: 10px;
+	overflow: auto; 
+}
+
+h2{
+	font-weight: normal;
+	color:  rgb(205, 0, 30);
+	font-size: 3em;
+	text-shadow: -2px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+p{
+	padding: 15px 0 0;
+}
+
+section img{
+	height: 100vh;
+	margin: 0 0 0 20px;
+	padding: 0 15px 0 0px;
+	animation: escala 1s linear;
+}
+
+/* Animación "mapa.png" section img */
+
+@keyframes escala{
+	0%{
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Indicaciones para JS */
+
+.desplegado{
+	top: 0;
+}
+
+nav ul{
+	display: block;
+	list-style: none;
+}
+
+nav li:not(:last-child){
+	margin-right: 0;
+}
+
+nav li:not(:first-child){
+	margin-top: 20px;
+}
+
+nav a{
+	color: rgb(255, 255, 255);
+	font-size: 2.5em;
+	text-shadow: -5px 3px 5px rgba(0, 0, 0, 1);
+	text-decoration: none;
+}
+
+.abrir span{
+	display: block;
+	height: 3px;
+	margin-bottom: 5px;
+}
+
+.cerrar{
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1250px){
+	.texto{
+		margin-bottom: 55px;
+		height: 300px;
+		width: 700px;
+	}
+}
+
+@media screen and (max-width: 1100px){
+	section img{
+		height: 75vh;
+		position: relative;
+		top: -97px;
+	}
+	.texto{
+		position: absolute;
+		bottom: 30px;
+		margin: 0;
+		height: 135px;
+		width: 700px;
+	}
+	header{
+		z-index: 1;
+	}	
+}
+
+@media screen and (max-width: 900px){
+	section img{
+		height: 70vh;
+		top: -97px;
+	}
+	.texto{
+		height: 125px;
+		width: 500px;
+	}
+
+@media screen and (max-width: 700px){
+	a img{
+		max-height: 75px;
+		min-height: 75px;
+	}
+	.desplegado{
+		margin-top: 55px;
+	}
+
+@media screen and (max-width: 650px){
+	section img{
+		height: 65vh;
+		top: -97px;
+	}
+	.texto{
+		height: 140px;
+		width: 370px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	section img{
+		height: 46vh;
+		top: -120px;
+	}
+	.texto{
+		height: 230px;
+		width: 220px;
+	}	
+}
+
+@media screen and (max-width: 390px){
+	section img{
+		height: 40vh;
+		top: -90px;
+	}
+	.texto{
+		height: 180px;
+		width: 170px;
+	}
+}

@@ -1,0 +1,223 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Marcellus SC', serif;
+}
+
+section{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../fondos/fondo_negro.png")no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Propiedades para la apariencia del menú */
+
+a img{
+	position: fixed;
+	right: 25px;
+	max-height: 100px;
+	z-index: 1;
+}
+
+nav{
+	position: fixed;
+	top: -100vh;
+	right: -38px;
+	padding: 15px 20px 20px 20px;
+	background-color: rgba(50, 50, 50, 0.9);
+	border-radius: 10px;
+	margin: 73px;
+	text-align: end;
+}
+
+/* Secciones scroll */
+
+section:nth-child(even){
+	background: url("../fondos/fondo_it_2.png")no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+section:nth-child(even) h2{
+	color:  rgb(205, 0, 30);
+}
+
+.logo{
+	width: 100vh;
+}
+
+section img{
+	width: 100vh;
+	display: block;
+}
+
+/* Propiedades del Texto */
+
+.texto{
+	background: url("../fondos/fondo_textos.png") center;
+	background-size: cover;
+	height: 420px;
+	margin: 175px 90px 150px 515px;
+	padding: 30px 60px 60px 60px;
+	border-radius: 10px;
+	text-align: center;
+	overflow: auto;
+}
+  
+h2{
+	font-weight: normal;
+	color:  rgb(205, 0, 30);
+	font-size: 3em;
+	text-shadow: -2px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+p{
+	padding: 15px 0 0;
+}
+
+/* Animación */
+
+.logo{
+	animation: escala 2s linear;
+}
+
+/* Animación "logo_it_sombra_2.png" .logo */
+
+@keyframes escala{
+	0%{
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}  
+
+/* Indicaciones para JS "aparición del personaje al hacer scroll" */
+	
+.it{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-it{
+	left: 0px;
+	opacity: 1;
+	transition: 1.2s linear;
+}
+
+/* Indicaciones para JS "menú" */
+
+.desplegado{
+	top: 0;
+}
+
+nav ul{
+	display: block;
+	list-style: none;
+}
+
+nav li:not(:last-child){
+	margin-right: 0;
+}
+
+nav li:not(:first-child){
+	margin-top: 20px;
+}
+
+nav a{
+	color: rgb(255, 255, 255);
+	font-size: 2.5em;
+	text-shadow: -5px 3px 5px rgba(0, 0, 0, 1);
+	text-decoration: none;
+}
+
+.abrir span{
+	display: block;
+	height: 3px;
+	margin-bottom: 5px;
+}
+
+.cerrar{
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1020px){
+	.texto{
+		margin: 150px 70px 110px 455px;
+	    height: 280px;
+	}
+}
+
+@media screen and (max-width: 890px){
+	section .logo{
+		width: 75vh;
+	}
+	.texto {
+	    height: 145px;
+	    margin-top: 570px;
+	    margin-left: 90px;
+	    z-index: 2;
+	    padding: 0px 20px 0px 20px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	a img{
+		z-index: 3;
+	}
+	nav{
+		z-index: 2;
+	}
+}		
+
+@media screen and (max-width: 665px){
+	section img{
+		width: 75vh;
+		top: 700px;
+	}
+	.texto{
+		margin: 0;
+		margin-top: auto;
+		height: 24.3vh;
+		border-radius: 0;
+	}
+}
+
+@media screen and (max-width: 500px){
+	section .logo{
+		width: 50vh;
+	}
+	section img{
+		width: 50vh;
+	}
+	.texto{
+		height: 49.3vh;
+	}
+}
+
+@media screen and (max-width: 335px){
+	section .logo{
+		width: 48vh;
+	}
+	section img{
+		width: 48vh;
+		top: 790px;
+	}
+	.texto{
+		height: 38.3vh;
+	}
+}

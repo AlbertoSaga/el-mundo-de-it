@@ -1,0 +1,475 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Marcellus SC', serif;
+}
+section{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../fondos/fondo_1.png")no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Propiedades para la apariencia del menú */
+
+a img{
+	position: fixed;
+	right: 25px;
+	max-height: 100px;
+	z-index: 1;
+}
+
+nav{
+	position: fixed;
+	top: -100vh;
+	right: -38px;
+	padding: 15px 20px 20px 20px;
+	background-color: rgba(50, 50, 50, 0.9);
+	border-radius: 10px;
+	margin: 73px;
+	text-align: end;
+}
+
+/* Secciones scroll */
+
+section:nth-child(even){
+	background: url("../fondos/fondo_2.png")no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+section:nth-child(even) h2{
+	color:  rgb(205, 0, 30);
+}
+
+/* Propiedades del Texto */
+
+h1{
+	font-weight: normal;
+	color:  rgb(205, 0, 30);
+	font-size: 10em;
+	text-shadow: -6px 4px 6px rgba(0, 0, 0, 0.9);
+}
+
+.texto{
+	background: url("../fondos/fondo_textos.png") center;
+	background-size: cover;
+	margin: 150px 25px 150px 70px;
+	padding: 20px 60px 60px 60px;
+	text-align: center;
+	border-radius: 10px;
+	overflow: auto;
+}
+
+h2{
+	font-weight: normal;
+	color:  rgb(205, 0, 30);
+	font-size: 3em;
+	text-shadow: -2px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+p{
+	padding: 15px 0 0;
+}
+
+/* Indicaciones para JS "menú" */
+
+.desplegado{
+	top: 0;
+}
+
+nav ul{
+	display: block;
+	list-style: none;
+}
+
+nav li:not(:last-child){
+	margin-right: 0;
+}
+
+nav li:not(:first-child){
+	margin-top: 20px;
+}
+
+nav a{
+	color: rgb(255, 255, 255);
+	font-size: 2.5em;
+	text-shadow: -5px 3px 5px rgba(0, 0, 0, 1);
+	text-decoration: none;
+}
+
+.abrir span{
+	display: block;
+	height: 3px;
+	margin-bottom: 5px;
+}
+
+.cerrar{
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/* Indicaciones para JS "aparición del personaje al hacer scroll" */
+
+#inicio{
+	height: 100vh;
+}
+
+section img{
+	width: 100vh;	
+}
+
+div img{
+	display: flex;
+	width: 100vh;
+}
+
+.billy{
+	position: absolute ;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-billy{
+	left: 0px;
+	opacity: 1;
+	transition: 1.2s linear;
+}
+
+.billy2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-billy2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.beverly{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-beverly{
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.beverly2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-beverly2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.ben{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-ben{
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.ben2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-ben2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.richie{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-richie{
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.richie2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-richie2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.eddie{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-eddie{
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.eddie2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-eddie2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.mike{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-mike{
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.mike2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-mike2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.stanley{
+	position: absolute;
+	left: -50px;
+	opacity: 0;
+}
+.efecto-stanley{
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.stanley2{
+	position: relative;
+	left: 240px;
+	opacity: 0;
+}
+.efecto-stanley2{
+	left: 240px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1210px){
+	.texto{
+		height: 550px;
+	}
+}
+
+@media screen and (max-width: 1175px){
+	.texto{
+		height: 490px;
+	}
+}
+
+@media screen and (max-width: 1140px){
+	a img{
+		z-index: 2;
+	}
+	nav{
+		z-index: 2;
+	}
+	.texto{
+		margin: 0;
+		height: 475px;
+    	margin-right: 22px;
+    	margin-left: 60px;
+    	padding: 15px 10px 0 6px;
+	}
+}
+
+@media screen and (max-width: 1090px){
+	.texto{
+		margin-right: 10px;
+		margin-left: 40px;
+	}
+}
+
+@media screen and (max-width: 990px){
+	.texto{
+		margin-top: auto;
+		margin-left: -700px;
+		margin-right: 0;
+		height: 79px;
+		border-radius: 0;
+		z-index: 1;
+		align-items: center;
+		padding: 15px 35px 0 70px;
+	}
+
+@media screen and (max-width: 930px){
+	h1{
+		font-size: 7em;
+	}
+}
+
+@media screen and (max-width: 910px){
+	section div img{
+		width: 70.3vh;
+	}
+	.texto{
+		margin-left: -500px;
+		height: 12.7vh;
+	}
+	
+}
+
+@media screen and (max-width: 740px){
+	.texto{
+		height: 12.7vh;
+		padding-left: 130px;
+	}
+}
+
+@media screen and (max-width: 710px){
+	section img{
+		width: 70.3vh;
+	}
+	section div img{
+		width: 70.3vh;
+	    margin-left: -85px;
+	}*/
+	.texto{
+		margin-left: -300px;
+		height: 88px;
+	}	
+}
+
+@media screen and (max-width: 685px){
+	section img{
+		width: 67vh;
+	}
+}
+
+@media screen and (max-width: 685px){
+	section div img{
+		width: 67vh;
+	}
+	.texto{
+		margin-left: -385px;
+		height: 14.32vh;
+		padding: 15px 35px 0 35px;
+	}
+}
+
+@media screen and (max-width: 650px){
+	h1{
+		font-size: 4em;
+	}
+}
+
+@media screen and (max-width: 606px){
+	section img{
+		width: 58vh;
+	}
+	section div img{
+		width: 58vh;	
+	    margin-left: -147px;
+	}
+	.texto{
+		margin-left: -260px;
+		height: 18.85vh;
+		padding: 15px 35px 0 35px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	section img{
+		width: 50vh;
+	}
+	section div img{
+		width: 50vh;	
+	    margin-left: -147px;
+	}
+	.texto{
+		margin-left: -205px;
+		height: 22.85vh;
+	}
+}
+
+@media screen and (max-width: 425px){
+	section img{
+		width: 45vh;
+	}
+	section div img{
+		width: 45vh;	
+	    margin-left: -147px;
+	}
+	.texto{
+		margin-left: -170px;
+		height: 25.35vh;
+    	padding: 15px 35px 0 35px;
+	}
+}
+
+@media screen and (max-width: 392px){
+	section img{
+		width: 37vh;
+	}
+	section div img{
+		width: 37vh;	
+	    margin-left: -147px;
+	}
+	.texto{
+		margin-left: -110px;
+		height: 29.35vh;
+		padding: 15px 35px 0 35px;
+	}
+}
+
+@media screen and (max-width: 365px){
+	h1{
+		font-size: 3em;
+	}
+}
+
+@media screen and (max-width: 340px){
+	section img{
+		width: 34.2vh;
+	}
+	section div img{
+		width: 34.2vh;
+    	margin-left: -147px;
+	}
+	.texto{
+		margin-left: -95px;
+		height: 30.70vh;
+}

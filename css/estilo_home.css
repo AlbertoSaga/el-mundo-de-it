@@ -1,0 +1,138 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Marcellus SC', serif;
+}
+
+/* Añado de fondo la imagen elegida que ocupe toda la pantalla */
+
+section{
+	height: 100vh;
+	display: flex; /*//////////////////* Conseguimos el centrado absoluto: horizontal/vertical;
+	gracias a 'justify-content + align-items: center;' */
+	justify-content: center;
+	align-items: center;
+	background: url("fondos/fondo_portada_2.png")no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Propiedades para la apariencia del menú */
+
+a img{ /* Posicionamos y redimensionamos la imagen que hará las funciones del botón 'menú' */
+	max-height: 100px;
+	right: 25px;
+	position: fixed; /* Dejo el 'menú' fijo para poder acceder a él en cualquier momento, 
+	sin necesidad de volver a la parte superior */
+	z-index: 1; /* La pongo en primer termino para que siempre esté visible al hacer scroll */
+}
+
+nav{ /* De la misma manera añadimos sus propiedades al futuro 'menú desplegado' */
+	position: fixed;
+	top: -100vh; /* Hacemos desaparecer el 'menú desplegado', siempre y cuando no esté activo gracias a 
+	las funciones de 'JS' qué veremos más adelante */
+	right: -38px;
+	padding: 15px 20px 20px 20px;
+	background-color: rgba(50, 50, 50, 0.9);
+	border-radius: 10px;
+	margin: 73px;
+	text-align: end;
+}
+
+/* Dimensionamos y posicionamos el logo de 'IT' */
+
+.logo{
+	width: 100vh;
+	margin: -60px 0px -55px 20px; /* A pesar de que el fondo y el logo podrían quedar centrados 
+	horizotal y verticalmente (como hemos visto anteriormente con el fondo) queremos centrar 
+	la palabra 'IT' del logo con respecto a la forma del alcantarillado de la imagen de portada, 
+	por lo que se ha decidido posicionar de manera manual hasta optener el resultado deseado */  
+	animation: escala 2s linear; /* Animamos el logo para darle mayor presecia a nuestra primera interacción 
+	con la web.
+	'escala' (que es nuestra animación pricipal) es el enlace con la animación que hemos creado con 'keyframes' 
+	a continuación: */  
+}
+
+/* Animación "logo_it_sombra_2.png" .logo */
+
+@keyframes escala{ /* Empezamos la animación sin opacidad en la imagen ('opacity: ;') para que vaya apareciendo 
+poco a poco. De igual manera escalamos la imagen, muy poco, para que la ampliación ('transfom: scale()')
+sea sutil y casi imperceptible, pero con cierto movimiento. */
+	0%{  
+		opacity: 0; 
+		transform: scale(0.90);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Indicaciones para JS */
+
+.desplegado{
+	top: 0;
+}
+
+nav ul{
+	display: block;
+	list-style: none;
+}
+
+nav li:not(:last-child){
+	margin-right: 0;
+}
+
+nav li:not(:first-child){
+	margin-top: 20px;
+}
+
+nav a{
+	color: rgb(255, 255, 255);
+	font-size: 2.5em;
+	text-shadow: -5px 3px 5px rgba(0, 0, 0, 1);
+	text-decoration: none;
+}
+
+.abrir span{
+	display: block;
+	height: 3px;
+	margin-bottom: 5px;
+}
+
+.cerrar{
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px){
+	.logo{
+		width: 80vh;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.logo{
+		width: 70vh;
+	}
+}
+
+/* Cambio la imagen de fondo por una que se adapte a proporciones verticales, como las del móvil */
+
+@media screen and (max-width: 500px){
+	section{
+		background: url("fondos/fondo_movil.png")no-repeat center;
+	}
+	.logo{
+		width: 47vh;
+		
+	}
+}
