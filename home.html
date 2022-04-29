@@ -1,21 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Estructura básica de nuestro documento HTML -->
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" href="css/estilo_home.css">
-	
+
+<!-- Link de la tipografía elegida en Google Fonts: 'Marcellus SC' (En este caso solo afectará al menú) -->	
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<a href="#" class="abrir" class="cerrar">
-			<img src="recursos/barco_menú.png">
+		<!-- Menú -->
+		<a href="#" class="abrir" class="cerrar"> <!-- Indicamos las diferentes 'clases' que luego necesitaremos en JS para poder 'desplegar' y volver a 'cerrar' nuestro botón -->
+			<img src="recursos/barco_menú.png"> <!-- Imagen que hará las funciones de botón para el menú -->
 		</a>
 
 		<nav>
 			<ul>
+				<!-- Las diferentes partes de la web que se podrán ver al desplegar el botón menú, clicando y pudiendo navegar entre ellas --> 
 				<li><a href="personajes_perdedores.html">Perdedores</a></li>
 				<li><a href="personaje_it.html">ESO</a></li>
 				<li><a href="mapa.html">Mapa de Derry</a></li>
@@ -24,9 +27,11 @@
 	</header>
 
 	<section>
+		<!-- Imagen del logo de it, que aparecerá terrorificamente, y como primer impacto, al entrar de la web -->
 		<img src="recursos/logo_it_sombra_2.png" class="logo">
 	</section>
-		
+	
+	<!-- Vinculamos nuestro archivos JS para poder desplegar la función menú-->	
 	<script src="js/función_menú_home.js"></script>	
 </body>
 </html>

@@ -1,21 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Estructura básica de nuestro documento HTML -->
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/estilo_mapa.css">
-	
+
+	<!-- Link de la tipografía elegida en Google Fonts: 'Marcellus SC' -->		
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<a href="#" class="abrir" class="cerrar">
-			<img src="recursos/barco_menú.png">
+		<!-- Menú -->
+		<a href="#" class="abrir" class="cerrar"> <!-- Indicamos las diferentes 'clases' que luego necesitaremos en JS para poder 'desplegar' y volver a 'cerrar' nuestro botón -->
+			<img src="recursos/barco_menú.png"> <!-- Imagen que hará las funciones de botón para el menú -->
 		</a>
 		
 		<nav>
 			<ul>
+				<!-- Las diferentes partes de la web que se podrán ver al desplegar el botón menú, clicando y pudiendo navegar entre ellas --> 
 				<li><a href="home.html">Home</a></li>
 				<li><a href="personajes_perdedores.html">Perdedores</a></li>
 				<li><a href="personaje_it.html">ESO</a></li>
@@ -24,11 +27,13 @@
 	</header>
 
 	<section>
+		<!-- Imagen del Mapa de 'DERRY', que aparecerá junto al texto, con una animación que incluiremos en nuestro CSS -->
 		<img src="recursos/mapa.png">
 	</section>
 
+	<!-- Recogemos toda la información de 'DERRY' en un en un '<div></div>' que hara las funciones de contenedor para incluir el encabezado (<h2></h2>) para el título, y los diferentes párrafos (<p></p>) para el texto -->
 	<div class="texto">
-		<h2><strong>Derry</strong></h2>
+		<h2><strong>Derry</strong></h2> <!-- Se han utilizado las estiquetas '<strong></strong>' para indicar relevancia de una palabra en particular, y darle el valor de 'negrita', a lo largo de todos los párrafos en diferentes palabras -->
 		
 		<p><strong>Derry</strong> es una ciudad (ficticia) con influencias canadienses, ubicada en el estado de <strong>Maine</strong>, <strong>Estados Unidos</strong>. Fue bautizada así por los colonos británicos que allí se asentaron. Conocido por ser unos de los territorios estadounidenses donde se llevaba a cabo <strong>la quema de brujas</strong> durante el <strong>siglo XIX</strong>.</p>
 		
@@ -40,6 +45,7 @@
 		Es reconocido por su gran abundancia de humedad, la presa que pasa por medio del pueblo y un sinfín de laberínticas cañerías que recorren el subsuelo de la ciudad: donde habita el <strong>MAL</strong>, en forma de <strong>PAYASO</strong>. </p>
 	</div>
 
+	<!-- Vinculamos nuestro archivo JS para poder desplegar la función menú-->	
 	<script src="js/función_menú_mapa.js"></script>
 </body>
 </html>

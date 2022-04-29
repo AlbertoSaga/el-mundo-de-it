@@ -2,9 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
-	font-family: 'Marcellus SC', serif;
+	font-family: 'Marcellus SC', serif; /* Google Fonts */
 }
+
+/* A continuación el proceso realizado para la apariencia del contenido es muy similar a la vista
+en las hojas de estilo de 'estilo_home.css' y 'estilo_mapa.css' */
+
 section{
 	height: 100vh;
 	display: flex;
@@ -37,7 +42,7 @@ nav{
 
 /* Secciones scroll */
 
-section:nth-child(even){
+section:nth-child(even){ /* Selecciono todas las secciones que sean hijas pares */
 	background: url("../fondos/fondo_2.png")no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -77,7 +82,7 @@ p{
 	padding: 15px 0 0;
 }
 
-/* Indicaciones para JS "menú" */
+/* Indicaciones para JS y poder desplegar el menú */
 
 .desplegado{
 	top: 0;
@@ -132,27 +137,31 @@ div img{
 	width: 100vh;
 }
 
-.billy{
+.billy{ /* Posión inicial de la imagen antes del efecto que ejecutaremos a continuación */
 	position: absolute ;
 	left: -50px;
 	opacity: 0;
 }
-.efecto-billy{
+.efecto-billy{ /* Transición que vamos a utilizar para que al hacer scroll
+aparezca la imagen */
 	left: 0px;
 	opacity: 1;
-	transition: 1.2s linear;
+	transition: 1s linear;
 }
-
+/* Con la siguiente imagen 'BILLY NIÑO' (.billy2) queremos que aparezca directamente, por eso,
+aunque la transicion sea la misma, los parametros en 'px' son también iguales */
 .billy2{
 	position: relative;
 	left: 240px;
 	opacity: 0;
-}
+} 
 .efecto-billy2{
 	left: 240px;
 	opacity: 1;
 	transition: 1s linear;
 }
+
+/* Repetimos el mismo proceso que acabamos de ver con 'BILLY' para el resto de personajes */
 
 .beverly{
 	position: absolute;
@@ -317,6 +326,9 @@ div img{
 }
 
 @media screen and (max-width: 1090px){
+	h1{
+		font-size: 9em;
+	}
 	.texto{
 		margin-right: 10px;
 		margin-left: 40px;
@@ -337,7 +349,7 @@ div img{
 
 @media screen and (max-width: 930px){
 	h1{
-		font-size: 7em;
+		font-size: 6.6em;
 	}
 }
 
@@ -392,7 +404,7 @@ div img{
 
 @media screen and (max-width: 650px){
 	h1{
-		font-size: 4em;
+		font-size: 3.8em;
 	}
 }
 

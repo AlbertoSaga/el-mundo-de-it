@@ -1,21 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Estructura básica de nuestro documento HTML -->
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/estilo_personaje_it.css">
-	
+
+	<!-- Link de la tipografía elegida en Google Fonts: 'Marcellus SC' -->	
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<a href="#" class="abrir" class="cerrar">
-			<img src="recursos/barco_menú.png">
+		<!-- Menú -->
+		<a href="#" class="abrir" class="cerrar"> <!-- Indicamos las diferentes 'clases' que luego necesitaremos en JS para poder 'desplegar' y volver a 'cerrar' nuestro botón -->
+			<img src="recursos/barco_menú.png"> <!-- Imagen que hará las funciones de botón para el menú -->
 		</a>
 		
 		<nav>
 			<ul>
+				<!-- Las diferentes partes de la web que se podrán ver al desplegar el botón menú, clicando y pudiendo navegar entre ellas -->
 				<li><a href="home.html">Home</a></li>
 				<li><a href="personajes_perdedores.html">Perdedores</a></li>
 				<li><a href="mapa.html">Mapa</a></li>
@@ -23,15 +26,19 @@
 		</nav>
 	</header>
 	
+	<!-- Dividimos en dos secciones el contenido, una para presentar al personaje y otra para desarrollarlo -->
 	<section id="inicio">
-		<img src="recursos/logo_it_sombra_2.png" id="logo" class="logo">
+		<!-- Imagen del logo de it, para presentarlo y darle presencia al personaje más importante, con una animación que incluiremos en nuestro CSS -->
+		<img src="recursos/logo_it_sombra_2.png" id="logo" class="logo"> 
 	</section>
 	
 	<section>
-		<img src="recursos/it.png" id="it" class="it">
+		<!-- Imágen idividual de 'IT' (retocada, 'transparente': .png). No la ponemos como imagen de fondo porque queremos que interactue con la página, apareciendo misteriosamente de uno de los lados al hacer scroll, consiguiendolo gracias a JS -->
+		<img src="recursos/it.png" id="it" class="it"> <!-- Indicamos el 'id' y la 'clase' que luego necesitaremos en JS para poder conseguir el efecto 'aparición' al hacer scroll -->
 		
+		<!-- Recogemos toda la información de 'IT' en un '<div></div>' que hara las funciones de contenedor para incluir el encabezado (<h2></h2>) para el título, y los diferentes párrafos (<p></p>) para el texto -->
 		<div class="texto">
-			<h2><strong>ESO: PENNYWISE</strong></h2>
+			<h2><strong>ESO: PENNYWISE</strong></h2> <!-- Se han utilizado las estiquetas '<strong></strong>' para indicar relevancia de una palabra en particular, y darle el valor de 'negrita', a lo largo de todos los párrafos en diferentes palabras -->
 			
 			<p>El <strong>terrorífico demonio</strong> conocido como '<strong>ESO</strong>' es una antigua <strong>entidad extradimensional</strong> cuya verdadera forma nunca fue vista. Tiene su origen mucho antes de la formación del universo mismo.</p>
 			
@@ -45,6 +52,7 @@
 		</div>
 	</section>
 
+	<!-- Vinculamos nuestro archivo JS para poder desplegar la función menú y el efecto 'aparición' al hacer scroll-->
 	<script src="js/funciones_it.js"></script>
 </body>
 </html>

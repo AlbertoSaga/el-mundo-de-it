@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-	font-family: 'Marcellus SC', serif;
+	font-family: 'Marcellus SC', serif; /* Google Fonts */
 
 /* Añado de fondo la imagen elegida que ocupe toda la pantalla */
 
@@ -70,12 +70,16 @@ section img{
 	height: 100vh;
 	margin: 0 0 0 20px;
 	padding: 0 15px 0 0px;
-	animation: escala 1s linear;
+	animation: escala 1s linear; /* Animamos el logo para darle mayor presecia a nuestra primera interacción 
+	con la web.
+	'escala' define al grupo de Keyframes a continuación: */  
 }
 
 /* Animación "mapa.png" section img */
 
-@keyframes escala{
+@keyframes escala{/* Empezamos la animación sin opacidad en la imagen ('opacity: ;') para que vaya apareciendo 
+poco a poco. De igual manera escalamos la imagen, muy poco, para que la ampliación ('transfom: scale()')
+sea sutil y casi imperceptible, pero con cierto movimiento. */
 	0%{
 		opacity: 0;
 		transform: scale(0.95);
@@ -86,7 +90,7 @@ section img{
 	}
 }
 
-/* Indicaciones para JS */
+/* Indicaciones para JS y poder desplegar el menú */
 
 .desplegado{
 	top: 0;

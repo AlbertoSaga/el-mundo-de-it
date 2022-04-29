@@ -2,9 +2,13 @@
 	margin: 0;
 	padding: 0;
 }
+
 body{
-	font-family: 'Marcellus SC', serif;
+	font-family: 'Marcellus SC', serif; /* Google Fonts */
 }
+
+/* A continuación el proceso realizado para la apariencia del contenido es muy similar a la vista
+en las hojas de estilo de 'estilo_home.css' y 'estilo_mapa.css' */
 
 section{
 	height: 100vh;
@@ -38,13 +42,13 @@ nav{
 
 /* Secciones scroll */
 
-section:nth-child(even){
+section:nth-child(even){ /* Selecciono todas las secciones que sean hijas pares */
 	background: url("../fondos/fondo_it_2.png")no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 }
 
-section:nth-child(even) h2{
+section:nth-child(even) h2{ 
 	color:  rgb(205, 0, 30);
 }
 
@@ -102,18 +106,19 @@ p{
 
 /* Indicaciones para JS "aparición del personaje al hacer scroll" */
 	
-.it{
+.it{ /* Posión inicial de la imagen antes del efecto que ejecutaremos a continuación */
 	position: absolute;
 	left: -50px;
 	opacity: 0;
 }
-.efecto-it{
+.efecto-it{ /* Transición que vamos a utilizar para que al hacer scroll
+aparezca la imagen */
 	left: 0px;
 	opacity: 1;
 	transition: 1.2s linear;
 }
 
-/* Indicaciones para JS "menú" */
+/* Indicaciones para JS y poder desplegar el menú */
 
 .desplegado{
 	top: 0;

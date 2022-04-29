@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Estructura básica de nuestro documento HTML -->
 <html>
 <head>
 	<meta charset="utf-8">
@@ -6,36 +6,42 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/estilo_personajes_perdedores.css">
 	
+	<!-- Link de la tipografía elegida en Google Fonts: 'Marcellus SC' -->
 	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
+		<!-- Menú -->
+		<a href="#" class="abrir" class="cerrar"> <!-- Indicamos las diferentes 'clases' que luego necesitaremos en JS para poder 'desplegar' y volver a 'cerrar' nuestro botón -->
+			<img src="recursos/barco_menú.png"><!-- Imagen que hará las funciones de botón para el menú -->
+		</a>
+
 		<nav>
 			<ul>
-				<li><a href="home.html">Home</a></li>
+				<!-- Las diferentes partes de la web que se podrán ver al desplegar el botón menú, clicando y pudiendo navegar entre ellas -->
+				<li><a href="home.html">Home</a></li> 
 				<li><a href="personaje_it.html">ESO</a></li>
 				<li><a href="mapa.html">Mapa</a></li>
 			</ul>
 		</nav>
-
-		<a href="#" class="abrir" class="cerrar">
-			<img src="recursos/barco_menú.png">
-		</a>
 	</header>
 
+	<!-- Dividimos en diferentes secciones el contenido, para presentar a los diferentes personajes -->
 	<section id="inicio" class="inicio">
-		<h1><strong>PERDEDORES</strong></h1>
+		<h1><strong>PERDEDORES</strong></h1> <!-- Introduccimos el encabezado (<h1></h1>) para indicar el título principal del página -->
 	</section>
 	
 	<section>
-		<img src="recursos/billy_adulto.png" id="billy" class="billy">
+		<!-- Imágen idividual de 'BILLY ADULTO' y 'BILLY NIÑO' (retocadas, 'transparentes': .png). No la ponemos como imagen de fondo porque queremos que interactue con la página, apareciendo misteriosamente de uno de los lados al hacer scroll, consiguiendolo gracias a JS -->
+		<img src="recursos/billy_adulto.png" id="billy" class="billy"> <!-- Indicamos el 'id' y la 'clase' que luego necesitaremos en JS para poder conseguir el efecto 'aparición' al hacer scroll -->
 		
 		<div>
 			<img src="recursos/billy_niño.png" id="billy2" class="billy2">	
 		</div>
 		
+		<!-- Recogemos toda la información de 'IT' en un '<div></div>' que hara las funciones de contenedor para incluir el encabezado (<h2></h2>) para el título, y los diferentes párrafos (<p></p>) para el texto -->
 		<div class="texto">
-			<h2><strong>Bill Denbrough</strong></h2>
+			<h2><strong>Bill Denbrough</strong></h2> <!-- Se han utilizado las estiquetas '<strong></strong>' para indicar relevancia de una palabra en particular, y darle el valor de 'negrita', a lo largo de todos los párrafos en diferentes palabras -->
 			
 			<p>El <strong>'Gran Bill'</strong> tuvo que vivir un evento traumático tras <strong>el asesinato de su hermano Georgie</strong> a manos de '<strong>ESO</strong>' en <strong>1988</strong>. Tras la tragedia, y el desprecio por parte de sus padres, desarrollará un gran complejo de culpa, agravando también su <strong>tartamudez</strong>.</p>
 
@@ -45,6 +51,8 @@
 		</div>
 	</section>
 	
+	<!-- Repetimos el mismo proceso que acabamos de ver con 'BILLY' para el resto de personajes -->
+
 	<section>
 		<img src="recursos/beverly_adulta.png" id="beverly" class="beverly">
 		
@@ -157,6 +165,7 @@
 		</div>
 	</section>
 
+	<!-- Vinculamos nuestro archivo JS para poder desplegar la función menú y el efecto 'aparición' al hacer scroll-->
 	<script src="js/funciones_personajes_perdedores.js"></script>
 </body>
 </html>
